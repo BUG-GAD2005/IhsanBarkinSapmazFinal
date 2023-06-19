@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShapeBlock : MonoBehaviour
 {
     [SerializeField] private GameObject blockPiecePrefab;
-    [SerializeField] private Vector2[] blockPiecePositions;
+    public Vector2[] blockPiecePositions;
     private ShapeBlockPiece[] blockPieces;
 
     [SerializeField]

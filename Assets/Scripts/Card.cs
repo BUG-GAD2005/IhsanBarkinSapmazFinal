@@ -8,7 +8,14 @@ public class Card : MonoBehaviour
 {
     [SerializeField] private Sprite buildingImage;
 
+    [SerializeField] private Vector2[] blockPiecePositionsToCreateShape;
+
     public int goldCostAmount, gemCostAmount;
+
+    public int constructionTime;
+
+    private bool isConstructionFinished;
+
 
     [SerializeField] private TextMeshProUGUI requiredGoldSourceText;
     [SerializeField] private TextMeshProUGUI requiredGemSourceText;
@@ -17,12 +24,6 @@ public class Card : MonoBehaviour
         this.gameObject.transform.Find("CardImage").GetComponent<Image>().sprite = buildingImage;
         requiredGemSourceText.text = gemCostAmount.ToString();
         requiredGoldSourceText.text = goldCostAmount.ToString();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void UpdateStatsAboutCardOnUI()
