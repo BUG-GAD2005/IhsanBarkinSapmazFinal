@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class GridCell : MonoBehaviour
 {
+    public int index;
     public bool isOccupied {  get; private set; }
 
     private Color defaultColor;
