@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &3849523
 BoxCollider2D:
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &58836070
 BoxCollider2D:
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &98397844
 BoxCollider2D:
@@ -827,6 +827,109 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98397841}
   m_CullTransparentMesh: 1
+--- !u!1 &113366919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113366920}
+  - component: {fileID: 113366924}
+  - component: {fileID: 113366923}
+  - component: {fileID: 113366922}
+  - component: {fileID: 113366921}
+  m_Layer: 0
+  m_Name: ShapeBlockPiece(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &113366920
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113366919}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 728021888}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 43, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &113366921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113366919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3c0cf7e27560a40b6eec94839bc8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &113366922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113366919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9a0884c923d05419a975b9e2dcbfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerBlock: {fileID: 728021889}
+--- !u!114 &113366923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113366919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 06fa9ead40e809048983e688805b671a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &113366924
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113366919}
+  m_CullTransparentMesh: 1
 --- !u!1 &131086765
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &131086768
 BoxCollider2D:
@@ -999,7 +1102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &135734476
 BoxCollider2D:
@@ -1194,7 +1297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &186286903
 BoxCollider2D:
@@ -1335,6 +1438,109 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203990984}
+  m_CullTransparentMesh: 1
+--- !u!1 &220415133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 220415134}
+  - component: {fileID: 220415138}
+  - component: {fileID: 220415137}
+  - component: {fileID: 220415136}
+  - component: {fileID: 220415135}
+  m_Layer: 0
+  m_Name: ShapeBlockPiece(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &220415134
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220415133}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 728021888}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 43}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &220415135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220415133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3c0cf7e27560a40b6eec94839bc8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &220415136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220415133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9a0884c923d05419a975b9e2dcbfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerBlock: {fileID: 728021889}
+--- !u!114 &220415137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220415133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 06fa9ead40e809048983e688805b671a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &220415138
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220415133}
   m_CullTransparentMesh: 1
 --- !u!1 &234660118
 GameObject:
@@ -1524,7 +1730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &248022797
 BoxCollider2D:
@@ -1666,9 +1872,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1743,7 +1949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &250330498
 BoxCollider2D:
@@ -1862,7 +2068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &282495605
 BoxCollider2D:
@@ -2080,9 +2286,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2233,7 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &308264171
 BoxCollider2D:
@@ -2622,7 +2828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &338936221
 BoxCollider2D:
@@ -2741,7 +2947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &341201058
 BoxCollider2D:
@@ -2860,7 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &341692689
 BoxCollider2D:
@@ -2979,7 +3185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &345517837
 BoxCollider2D:
@@ -3098,7 +3304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &386135647
 BoxCollider2D:
@@ -3217,7 +3423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &387914437
 BoxCollider2D:
@@ -3336,7 +3542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &397378229
 BoxCollider2D:
@@ -3455,7 +3661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &414394003
 BoxCollider2D:
@@ -3574,7 +3780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &418021761
 BoxCollider2D:
@@ -3693,7 +3899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &429064826
 BoxCollider2D:
@@ -3888,7 +4094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &448516338
 BoxCollider2D:
@@ -3953,6 +4159,109 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448516335}
+  m_CullTransparentMesh: 1
+--- !u!1 &458946636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458946637}
+  - component: {fileID: 458946641}
+  - component: {fileID: 458946640}
+  - component: {fileID: 458946639}
+  - component: {fileID: 458946638}
+  m_Layer: 0
+  m_Name: ShapeBlockPiece(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &458946637
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458946636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 728021888}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &458946638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458946636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3c0cf7e27560a40b6eec94839bc8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &458946639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458946636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9a0884c923d05419a975b9e2dcbfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerBlock: {fileID: 728021889}
+--- !u!114 &458946640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458946636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 06fa9ead40e809048983e688805b671a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &458946641
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458946636}
   m_CullTransparentMesh: 1
 --- !u!1 &459381132
 GameObject:
@@ -4142,7 +4451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &489243445
 BoxCollider2D:
@@ -4261,7 +4570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &493949263
 BoxCollider2D:
@@ -4380,7 +4689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &495578002
 BoxCollider2D:
@@ -4659,7 +4968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &534218583
 BoxCollider2D:
@@ -4801,9 +5110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4878,7 +5187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &586073341
 BoxCollider2D:
@@ -5073,7 +5382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &597397667
 BoxCollider2D:
@@ -5151,6 +5460,7 @@ GameObject:
   - component: {fileID: 631661151}
   - component: {fileID: 631661150}
   - component: {fileID: 631661149}
+  - component: {fileID: 631661152}
   m_Layer: 0
   m_Name: CanvasCardPanel
   m_TagString: Untagged
@@ -5176,7 +5486,6 @@ RectTransform:
   - {fileID: 248231266}
   - {fileID: 1585323372}
   - {fileID: 1111057183}
-  - {fileID: 926408447}
   - {fileID: 728021888}
   m_Father: {fileID: 1425176726}
   m_RootOrder: 2
@@ -5247,6 +5556,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!114 &631661152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631661147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cadd598569c39d4aa12023c490055da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634782794
 GameObject:
   m_ObjectHideFlags: 0
@@ -5435,7 +5756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &640627508
 BoxCollider2D:
@@ -5554,7 +5875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &651092026
 BoxCollider2D:
@@ -5673,7 +5994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &665525451
 BoxCollider2D:
@@ -5868,7 +6189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &716270749
 BoxCollider2D:
@@ -5987,7 +6308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &726121724
 BoxCollider2D:
@@ -6065,6 +6386,7 @@ GameObject:
   - component: {fileID: 728021891}
   - component: {fileID: 728021890}
   - component: {fileID: 728021889}
+  - component: {fileID: 728021892}
   m_Layer: 0
   m_Name: ShapeBlock
   m_TagString: Untagged
@@ -6083,13 +6405,16 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 458946637}
+  - {fileID: 113366920}
+  - {fileID: 220415134}
   m_Father: {fileID: 631661148}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -158, y: 14}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728021889
@@ -6104,6 +6429,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a5ae0d9882cea469ea58fc5f597469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockPiecePrefab: {fileID: 5159917456725824088, guid: 0ff6c71c4598d3947960d6525d038179, type: 3}
+  blockPiecePositions:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 1}
+  previewPieceSize: 40
+  previewPieceOffset: 3
+  selector: {fileID: 0}
 --- !u!61 &728021890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6138,6 +6471,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728021887}
   m_CullTransparentMesh: 1
+--- !u!114 &728021892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728021887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa21731f40aeaf94fa31c778a93eb710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &744972564
 GameObject:
   m_ObjectHideFlags: 0
@@ -6191,7 +6536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &744972567
 BoxCollider2D:
@@ -6310,7 +6655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &749348147
 BoxCollider2D:
@@ -6429,7 +6774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &756000202
 BoxCollider2D:
@@ -6548,7 +6893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &769680873
 BoxCollider2D:
@@ -6667,7 +7012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &778835500
 BoxCollider2D:
@@ -6862,7 +7207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &807203515
 BoxCollider2D:
@@ -6981,7 +7326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &817473144
 BoxCollider2D:
@@ -7100,7 +7445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &822482525
 BoxCollider2D:
@@ -7219,7 +7564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &826989263
 BoxCollider2D:
@@ -7338,7 +7683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &831565802
 BoxCollider2D:
@@ -7457,7 +7802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &832429689
 BoxCollider2D:
@@ -7576,7 +7921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &843729570
 BoxCollider2D:
@@ -7772,7 +8117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &867169800
 BoxCollider2D:
@@ -7973,96 +8318,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867911327}
   m_CullTransparentMesh: 1
---- !u!1 &926408446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 926408447}
-  - component: {fileID: 926408450}
-  - component: {fileID: 926408449}
-  - component: {fileID: 926408448}
-  m_Layer: 0
-  m_Name: Block
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &926408447
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926408446}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 631661148}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149.1, y: 14.6}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &926408448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926408446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b9a0884c923d05419a975b9e2dcbfbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerBlock: {fileID: 0}
---- !u!114 &926408449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926408446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 06fa9ead40e809048983e688805b671a, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &926408450
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926408446}
-  m_CullTransparentMesh: 1
 --- !u!1 &934298762
 GameObject:
   m_ObjectHideFlags: 0
@@ -8221,7 +8476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &967142312
 BoxCollider2D:
@@ -8340,7 +8595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &972365221
 BoxCollider2D:
@@ -8459,7 +8714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &975381480
 BoxCollider2D:
@@ -8578,7 +8833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &979739882
 BoxCollider2D:
@@ -8697,7 +8952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &999704128
 BoxCollider2D:
@@ -9027,7 +9282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1086938800
 BoxCollider2D:
@@ -9222,7 +9477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1108870280
 BoxCollider2D:
@@ -9341,7 +9596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1110015565
 BoxCollider2D:
@@ -9483,9 +9738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9560,7 +9815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1117524544
 BoxCollider2D:
@@ -9814,7 +10069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1133512327
 BoxCollider2D:
@@ -9933,7 +10188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1135969077
 BoxCollider2D:
@@ -10052,7 +10307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1150038779
 BoxCollider2D:
@@ -10171,7 +10426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1154585147
 BoxCollider2D:
@@ -10290,7 +10545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1179718668
 BoxCollider2D:
@@ -10409,7 +10664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1195773538
 BoxCollider2D:
@@ -10528,7 +10783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1224970722
 BoxCollider2D:
@@ -10624,6 +10879,7 @@ Transform:
   m_Children:
   - {fileID: 2136605819}
   - {fileID: 1626795827}
+  - {fileID: 2067329485}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10908,7 +11164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1262323801
 BoxCollider2D:
@@ -11162,7 +11418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1277563895
 BoxCollider2D:
@@ -11281,7 +11537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1281151474
 BoxCollider2D:
@@ -11476,7 +11732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1316539764
 BoxCollider2D:
@@ -11640,9 +11896,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11793,7 +12049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1402397720
 BoxCollider2D:
@@ -11912,7 +12168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1408896295
 BoxCollider2D:
@@ -12031,7 +12287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1415865889
 BoxCollider2D:
@@ -12260,7 +12516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1461625870
 BoxCollider2D:
@@ -12531,7 +12787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1505495797
 BoxCollider2D:
@@ -12726,7 +12982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1550415609
 BoxCollider2D:
@@ -12845,7 +13101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1551913822
 BoxCollider2D:
@@ -12964,7 +13220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1553104731
 BoxCollider2D:
@@ -13083,7 +13339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1562553025
 BoxCollider2D:
@@ -13346,7 +13602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1582500623
 BoxCollider2D:
@@ -13488,9 +13744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13865,7 +14121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1647019246
 BoxCollider2D:
@@ -13984,7 +14240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1674558462
 BoxCollider2D:
@@ -14103,7 +14359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1682464102
 BoxCollider2D:
@@ -14222,7 +14478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1729301898
 BoxCollider2D:
@@ -14687,7 +14943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1779736367
 BoxCollider2D:
@@ -14806,7 +15062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1825068565
 BoxCollider2D:
@@ -14925,7 +15181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1826732257
 BoxCollider2D:
@@ -15044,7 +15300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1831379269
 BoxCollider2D:
@@ -15163,7 +15419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1835607809
 BoxCollider2D:
@@ -15282,7 +15538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1853609758
 BoxCollider2D:
@@ -15401,7 +15657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1857886457
 BoxCollider2D:
@@ -15520,7 +15776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1864977973
 BoxCollider2D:
@@ -15639,7 +15895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1870755759
 BoxCollider2D:
@@ -15758,7 +16014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1887486141
 BoxCollider2D:
@@ -15877,7 +16133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1906906898
 BoxCollider2D:
@@ -16285,9 +16541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -16362,7 +16618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1952874935
 BoxCollider2D:
@@ -16557,7 +16813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1977662993
 BoxCollider2D:
@@ -16676,7 +16932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1977778337
 BoxCollider2D:
@@ -16795,7 +17051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1985909155
 BoxCollider2D:
@@ -16914,7 +17170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &1988597019
 BoxCollider2D:
@@ -17109,7 +17365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &2026922984
 BoxCollider2D:
@@ -17310,6 +17566,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063288182}
   m_CullTransparentMesh: 1
+--- !u!1 &2067329484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067329485}
+  - component: {fileID: 2067329486}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2067329485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067329484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1236126855}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067329486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067329484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41bc72d868aef448a0a5e82ffe818ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2073921008
 GameObject:
   m_ObjectHideFlags: 0
@@ -17363,7 +17663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &2073921011
 BoxCollider2D:
@@ -17482,7 +17782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &2105144314
 BoxCollider2D:
@@ -17601,7 +17901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &2125246116
 BoxCollider2D:
@@ -17720,7 +18020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 0}
+  hoveredColor: {r: 0, g: 0, b: 0, a: 0}
   thePieceOfBlockThatGridHave: {fileID: 0}
 --- !u!61 &2131520296
 BoxCollider2D:

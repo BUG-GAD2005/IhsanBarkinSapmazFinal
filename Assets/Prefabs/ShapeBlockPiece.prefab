@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &613456524764998503
+--- !u!1 &5159917456725824088
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 815816104504386613}
-  - component: {fileID: 2624980003253453534}
-  - component: {fileID: 2685719894231807954}
-  - component: {fileID: 8047388259665413157}
-  - component: {fileID: 3642715860728265506}
-  m_Layer: 5
-  m_Name: GridCell
+  - component: {fileID: 5159917456725824089}
+  - component: {fileID: 5159917456725824420}
+  - component: {fileID: 5159917456725824423}
+  - component: {fileID: 5159917456725824422}
+  - component: {fileID: 2693026544236313704}
+  - component: {fileID: 714062443409424457}
+  m_Layer: 0
+  m_Name: ShapeBlockPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &815816104504386613
+--- !u!224 &5159917456725824089
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613456524764998503}
+  m_GameObject: {fileID: 5159917456725824088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -37,38 +38,38 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -149.1, y: 14.6}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2624980003253453534
+--- !u!222 &5159917456725824420
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613456524764998503}
+  m_GameObject: {fileID: 5159917456725824088}
   m_CullTransparentMesh: 1
---- !u!114 &2685719894231807954
+--- !u!114 &5159917456725824423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613456524764998503}
+  m_GameObject: {fileID: 5159917456725824088}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5d63c5b6f0274e48ad34f06230c3a40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 06fa9ead40e809048983e688805b671a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77,14 +78,39 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 4.14
---- !u!61 &8047388259665413157
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5159917456725824422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159917456725824088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9a0884c923d05419a975b9e2dcbfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerBlock: {fileID: 0}
+--- !u!114 &2693026544236313704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5159917456725824088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3c0cf7e27560a40b6eec94839bc8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &714062443409424457
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613456524764998503}
+  m_GameObject: {fileID: 5159917456725824088}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -104,18 +130,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3642715860728265506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613456524764998503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21266fc9259345843b9b57b586d68dc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
-  hoveredColor: {r: 0.5943396, g: 0.1485849, b: 0.1485849, a: 1}
-  thePieceOfBlockThatGridHave: {fileID: 0}
