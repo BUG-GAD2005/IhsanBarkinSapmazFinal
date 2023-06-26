@@ -21,14 +21,17 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
     private bool mouseClicked;
 
+    private Color currentDefaultColor;
 
     [SerializeField] private TextMeshProUGUI requiredGoldSourceText;
     [SerializeField] private TextMeshProUGUI requiredGemSourceText;
     void Start()
     {
+        currentDefaultColor = this.gameObject.GetComponent<Image>().color;
         this.gameObject.transform.Find("CardImage").GetComponent<Image>().sprite = buildingImage;
         requiredGemSourceText.text = gemCostAmount.ToString();
         requiredGoldSourceText.text = goldCostAmount.ToString();
+        PlayerResources.Instance.isCurrentResourceEnoughForCardCost += CurrentResourceIsEnoughForThisCard;
     }
 
     public void UpdateStatsAboutCardOnUI()
@@ -38,10 +41,29 @@ public class Card : MonoBehaviour, IPointerClickHandler
         requiredGoldSourceText.text = goldCostAmount.ToString();
     }
 
+    public void CurrentResourceIsEnoughForThisCard()
+    {
+        if (PlayerResources.Instance.goldSource < goldCostAmount || PlayerResources.Instance.gemSource < gemCostAmount)
+        {
+            this.gameObject.GetComponent<Image>().raycastTarget = false;
+            this.gameObject.GetComponent<Image>().maskable = false;
+            this.gameObject.GetComponent<Image>().color = Color.red;
+        }
+
+        if (PlayerResources.Instance.goldSource >= goldCostAmount && PlayerResources.Instance.gemSource >= gemCostAmount)
+        {
+            this.gameObject.GetComponent<Image>().raycastTarget = true;
+            this.gameObject.GetComponent<Image>().maskable = true;
+            this.gameObject.GetComponent<Image>().color = currentDefaultColor;
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("ENTEREDDD");
         var blockShape = Instantiate(blockShapePrefab, transform.position, Quaternion.identity);
+        blockShape.GetComponent<ShapeBlock>().goldCost = goldCostAmount;
+        blockShape.GetComponent<ShapeBlock>().gemCost = gemCostAmount;
         blockShape.transform.SetParent(transform);
         blockShape.GetComponent<ShapeBlock>().blockPiecePositions = new Vector2[blockPiecePositionsToCreateShape.Length];
         for (int i = 0; i < blockPiecePositionsToCreateShape.Length; i++)

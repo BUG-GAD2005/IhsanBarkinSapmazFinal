@@ -1,18 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerResources : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int gemSource = 10;
+    public int goldSource = 10;
+ 
+    public static PlayerResources Instance;
+
+    public delegate void PlayerResourceTextUpdate();
+    public event PlayerResourceTextUpdate UpdateThePlayerResourceText;
+
+    public delegate void IsResourcesEnoughtToBuilding();
+    public event IsResourcesEnoughtToBuilding isCurrentResourceEnoughForCardCost;
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DecreasePlayerSource(int costOfGold, int costOfGem)
     {
-        
+        gemSource -= costOfGem;
+        goldSource -= costOfGold;
+        UpdateThePlayerResourceText.Invoke();
+        isCurrentResourceEnoughForCardCost.Invoke();
     }
+
+    public void IncreasePlayerSource(int increaseAmountOfGold, int increaseAmountOfGem)
+    {
+        gemSource += increaseAmountOfGem;
+        goldSource += increaseAmountOfGold;
+        UpdateThePlayerResourceText.Invoke();
+        isCurrentResourceEnoughForCardCost.Invoke();
+    }
+
 }

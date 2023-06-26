@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ShapeBlock : MonoBehaviour
 {
     [SerializeField] private GameObject blockPiecePrefab;
@@ -15,6 +15,8 @@ public class ShapeBlock : MonoBehaviour
 
     [HideInInspector] public ShapeBlockSelector selector;
 
+    public int gemCost;
+    public int goldCost;
     private void Start()
     {
         selector = GetComponent<ShapeBlockSelector>();
@@ -68,7 +70,10 @@ public class ShapeBlock : MonoBehaviour
             blockPiece.ownerBlock = null;
 
             GridManager.Instance.GetCell(targetCell).Occupy(true);
+
         }
+
+        PlayerResources.Instance.DecreasePlayerSource(goldCost,gemCost);
 
         Destroy(gameObject);
     }
