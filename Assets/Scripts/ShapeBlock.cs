@@ -7,7 +7,7 @@ public class ShapeBlock : MonoBehaviour
 {
     [SerializeField] private GameObject blockPiecePrefab;
     public Vector2[] blockPiecePositions;
-    private ShapeBlockPiece[] blockPieces;
+    private ShapeBlockPiece[] blockPieces = new ShapeBlockPiece[5];
 
     [SerializeField]
     [Tooltip("Pieces will set their size to grid cell size automatically in game.")]
@@ -101,4 +101,5 @@ public class ShapeBlock : MonoBehaviour
 
         return targetCell;
     }
+
 }

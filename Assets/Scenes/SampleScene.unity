@@ -1648,10 +1648,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingImage: {fileID: 21300000, guid: c094fc383b59e5b408c4fccdc27cc77f, type: 3}
-  blockPiecePositionsToCreateShape: []
+  blockPiecePositionsToCreateShape:
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 0}
   goldCostAmount: 5
   gemCostAmount: 3
   constructionTime: 0
+  blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
   requiredGoldSourceText: {fileID: 2063288184}
   requiredGemSourceText: {fileID: 1755152395}
 --- !u!114 &248231268
@@ -1668,9 +1672,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2064,10 +2068,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingImage: {fileID: 21300000, guid: c094fc383b59e5b408c4fccdc27cc77f, type: 3}
-  blockPiecePositionsToCreateShape: []
+  blockPiecePositionsToCreateShape:
+  - {x: 0, y: 0}
+  - {x: 0, y: 1}
   goldCostAmount: 5
   gemCostAmount: 3
   constructionTime: 0
+  blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
   requiredGoldSourceText: {fileID: 1744049751}
   requiredGemSourceText: {fileID: 1128372125}
 --- !u!114 &291763096
@@ -2084,9 +2091,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4787,10 +4794,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingImage: {fileID: 21300000, guid: 87f8e39a91d536a4c878d50c2c680541, type: 3}
-  blockPiecePositionsToCreateShape: []
+  blockPiecePositionsToCreateShape:
+  - {x: 0, y: 0}
+  - {x: -1, y: 0}
+  - {x: 0, y: 1}
   goldCostAmount: 5
   gemCostAmount: 3
   constructionTime: 0
+  blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
   requiredGoldSourceText: {fileID: 335143370}
   requiredGemSourceText: {fileID: 34063200}
 --- !u!114 &549132666
@@ -4807,9 +4818,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5183,7 +5194,6 @@ RectTransform:
   - {fileID: 248231266}
   - {fileID: 1585323372}
   - {fileID: 1111057183}
-  - {fileID: 728021888}
   m_Father: {fileID: 1425176726}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6071,11 +6081,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726121721}
   m_CullTransparentMesh: 1
---- !u!224 &728021888 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-  m_PrefabInstance: {fileID: 3549789253147031840}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &744972564
 GameObject:
   m_ObjectHideFlags: 0
@@ -9313,10 +9318,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingImage: {fileID: 21300000, guid: c094fc383b59e5b408c4fccdc27cc77f, type: 3}
-  blockPiecePositionsToCreateShape: []
+  blockPiecePositionsToCreateShape:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
   goldCostAmount: 5
   gemCostAmount: 3
   constructionTime: 0
+  blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
   requiredGoldSourceText: {fileID: 1917289220}
   requiredGemSourceText: {fileID: 1070288974}
 --- !u!114 &1111057185
@@ -9333,9 +9341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13321,10 +13329,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingImage: {fileID: 21300000, guid: c094fc383b59e5b408c4fccdc27cc77f, type: 3}
-  blockPiecePositionsToCreateShape: []
+  blockPiecePositionsToCreateShape:
+  - {x: 0, y: 0}
   goldCostAmount: 5
   gemCostAmount: 3
   constructionTime: 0
+  blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
   requiredGoldSourceText: {fileID: 55150044}
   requiredGemSourceText: {fileID: 459381134}
 --- !u!114 &1585323374
@@ -13341,9 +13351,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -16120,10 +16130,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingImage: {fileID: 21300000, guid: 17fe513715dcec44791ca7768fe298a0, type: 3}
-  blockPiecePositionsToCreateShape: []
+  blockPiecePositionsToCreateShape:
+  - {x: 0, y: 0}
+  - {x: 1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
   goldCostAmount: 5
   gemCostAmount: 3
   constructionTime: 0
+  blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
   requiredGoldSourceText: {fileID: 867911329}
   requiredGemSourceText: {fileID: 312513187}
 --- !u!114 &1934500259
@@ -16140,9 +16155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17734,112 +17749,3 @@ MonoBehaviour:
   cellOffset: 2
   cellPrefab: {fileID: 613456524764998503, guid: c3fe10452b951db429dc890cd25e5721, type: 3}
   gridCanvas: {fileID: 1635778114}
---- !u!1001 &3549789253147031840
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 631661148}
-    m_Modifications:
-    - target: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_Name
-      value: ShapeBlock
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -133.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 72.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549789252759274144, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}

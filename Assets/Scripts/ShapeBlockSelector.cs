@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ShapeBlockSelector : MonoBehaviour
 {
     private ShapeBlock block;
@@ -34,6 +34,8 @@ public class ShapeBlockSelector : MonoBehaviour
     {
         isSelected = false;
 
-        transform.position = defaultPosition;
+        //transform.position = defaultPosition;
+
+        Destroy(this.gameObject);
     }
 }
