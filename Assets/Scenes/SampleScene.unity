@@ -1654,8 +1654,11 @@ MonoBehaviour:
   - {x: 1, y: 0}
   goldCostAmount: 5
   gemCostAmount: 3
-  constructionTime: 0
+  constructionTime: 7
   blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
+  gemResourceGainAmount: 3
+  goldResourceGainAmount: 2
+  resourceGeneratorCooldownAmount: 9
   requiredGoldSourceText: {fileID: 2063288184}
   requiredGemSourceText: {fileID: 1755152395}
 --- !u!114 &248231268
@@ -2119,8 +2122,11 @@ MonoBehaviour:
   - {x: 0, y: 1}
   goldCostAmount: 5
   gemCostAmount: 3
-  constructionTime: 0
+  constructionTime: 10
   blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
+  gemResourceGainAmount: 3
+  goldResourceGainAmount: 4
+  resourceGeneratorCooldownAmount: 10
   requiredGoldSourceText: {fileID: 1744049751}
   requiredGemSourceText: {fileID: 1128372125}
 --- !u!114 &291763096
@@ -4846,8 +4852,11 @@ MonoBehaviour:
   - {x: 0, y: 1}
   goldCostAmount: 5
   gemCostAmount: 3
-  constructionTime: 0
+  constructionTime: 9
   blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
+  gemResourceGainAmount: 4
+  goldResourceGainAmount: 1
+  resourceGeneratorCooldownAmount: 10
   requiredGoldSourceText: {fileID: 335143370}
   requiredGemSourceText: {fileID: 34063200}
 --- !u!114 &549132666
@@ -9415,8 +9424,11 @@ MonoBehaviour:
   - {x: 1, y: 0}
   goldCostAmount: 5
   gemCostAmount: 3
-  constructionTime: 0
+  constructionTime: 10
   blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
+  gemResourceGainAmount: 3
+  goldResourceGainAmount: 4
+  resourceGeneratorCooldownAmount: 10
   requiredGoldSourceText: {fileID: 1917289220}
   requiredGemSourceText: {fileID: 1070288974}
 --- !u!114 &1111057185
@@ -13427,8 +13439,11 @@ MonoBehaviour:
   - {x: 0, y: 0}
   goldCostAmount: 5
   gemCostAmount: 3
-  constructionTime: 0
+  constructionTime: 8
   blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
+  gemResourceGainAmount: 2
+  goldResourceGainAmount: 2
+  resourceGeneratorCooldownAmount: 8
   requiredGoldSourceText: {fileID: 55150044}
   requiredGemSourceText: {fileID: 459381134}
 --- !u!114 &1585323374
@@ -16231,8 +16246,11 @@ MonoBehaviour:
   - {x: 1, y: 1}
   goldCostAmount: 5
   gemCostAmount: 3
-  constructionTime: 0
+  constructionTime: 10
   blockShapePrefab: {fileID: 3549789252759274079, guid: 2ba5aabaf1c69e34fa3ad799bdbf28ae, type: 3}
+  gemResourceGainAmount: 3
+  goldResourceGainAmount: 5
+  resourceGeneratorCooldownAmount: 10
   requiredGoldSourceText: {fileID: 867911329}
   requiredGemSourceText: {fileID: 312513187}
 --- !u!114 &1934500259

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,14 +10,26 @@ public class ShapeBlock : MonoBehaviour
     public Vector2[] blockPiecePositions;
     private ShapeBlockPiece[] blockPieces = new ShapeBlockPiece[5];
 
+    [SerializeField] Image constructionTimerImage;
+
     [SerializeField]
     [Tooltip("Pieces will set their size to grid cell size automatically in game.")]
     private float previewPieceSize = 40, previewPieceOffset = 3f;
 
     [HideInInspector] public ShapeBlockSelector selector;
 
+    public int constructionTime;
+
+    public Sprite buildingSprite;
+
     public int gemCost;
     public int goldCost;
+
+    public int gemResourceGainAmount;
+    public int goldResourceGainAmount;
+
+    public int resourceGenerateCooldownAmount;
+    private bool isConstructed;
     private void Start()
     {
         selector = GetComponent<ShapeBlockSelector>();
@@ -52,6 +65,7 @@ public class ShapeBlock : MonoBehaviour
 
             blockPieces[n] = blockPiece;
         }
+
     }
 
     public void PlaceBlock()
@@ -75,7 +89,8 @@ public class ShapeBlock : MonoBehaviour
 
         PlayerResources.Instance.DecreasePlayerSource(goldCost,gemCost);
 
-        Destroy(gameObject);
+        StartCoroutine(ConstructionTimer());
+        //Destroy(gameObject);
     }
 
     public bool CanPlace()
@@ -107,4 +122,66 @@ public class ShapeBlock : MonoBehaviour
         return targetCell;
     }
 
+    private void ConstructionState(Image constructionTimerImage)
+    {
+        constructionTimerImage.fillAmount = (constructionTime*10) / 100f;
+    }
+
+    private void ResourceGeneratingState(Image resourceGeneratingTimerImage)
+    {
+        resourceGeneratingTimerImage.fillAmount = (resourceGenerateCooldownAmount * 10) / 100f;
+    }
+
+    IEnumerator ConstructionTimer()
+    {
+        var timerImage = Instantiate(constructionTimerImage,transform.position, Quaternion.identity);
+        timerImage.transform.SetParent(blockPieces[0].transform);
+        timerImage.transform.position = blockPieces[0].transform.position;
+        var tempTimer = constructionTime;
+
+        foreach (var item in blockPieces)
+        {
+            item.gameObject.GetComponent<Image>().color = Color.white;
+            item.gameObject.GetComponent<Image>().raycastTarget = false;
+            item.gameObject.GetComponent<Image>().maskable = false;
+        }
+
+        for (int i = tempTimer; tempTimer >= 0; tempTimer--)
+        {
+            constructionTime--;
+            ConstructionState(timerImage);
+            Debug.Log("TEST01");
+            yield return new WaitForSeconds(1f);
+        }
+
+        foreach (var item in blockPieces)
+        {
+            item.GetComponent<Image>().sprite = buildingSprite;
+        }
+
+        StartCoroutine(BuildingResourceGenerateState());
+    }
+
+    IEnumerator BuildingResourceGenerateState()
+    {
+        for (int i = 0; i < 20000; i++)
+        {
+            var timerImage = Instantiate(constructionTimerImage, transform.position, Quaternion.identity);
+            timerImage.transform.SetParent(blockPieces[0].transform);
+            timerImage.transform.position = blockPieces[0].transform.position;
+            var tempTimer = resourceGenerateCooldownAmount;
+            for (int a = tempTimer; tempTimer >= 0; tempTimer--)
+            {
+                resourceGenerateCooldownAmount--;
+                ResourceGeneratingState(timerImage);
+                yield return new WaitForSeconds(1f);
+            }
+            Destroy(timerImage);
+            Debug.Log("RESOURCE AMOUNT IS ADDING");
+            PlayerResources.Instance.IncreasePlayerSource(goldResourceGainAmount, gemResourceGainAmount);
+            Debug.Log("RESOURCE GENERATOR FINISHED");
+        }
+
+
+    }
 }

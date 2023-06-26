@@ -19,6 +19,11 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
     public GameObject blockShapePrefab;
 
+    [SerializeField] private int gemResourceGainAmount;
+    [SerializeField] private int goldResourceGainAmount;
+
+    [SerializeField] private int resourceGeneratorCooldownAmount;
+
     private bool mouseClicked;
 
     private Color currentDefaultColor;
@@ -64,6 +69,11 @@ public class Card : MonoBehaviour, IPointerClickHandler
         var blockShape = Instantiate(blockShapePrefab, transform.position, Quaternion.identity);
         blockShape.GetComponent<ShapeBlock>().goldCost = goldCostAmount;
         blockShape.GetComponent<ShapeBlock>().gemCost = gemCostAmount;
+        blockShape.GetComponent<ShapeBlock>().constructionTime = constructionTime;
+        blockShape.GetComponent<ShapeBlock>().buildingSprite = buildingImage;
+        blockShape.GetComponent<ShapeBlock>().gemResourceGainAmount = gemResourceGainAmount;
+        blockShape.GetComponent<ShapeBlock>().goldResourceGainAmount = goldResourceGainAmount;
+        blockShape.GetComponent<ShapeBlock>().resourceGenerateCooldownAmount = resourceGeneratorCooldownAmount;
         blockShape.transform.SetParent(transform);
         blockShape.GetComponent<ShapeBlock>().blockPiecePositions = new Vector2[blockPiecePositionsToCreateShape.Length];
         for (int i = 0; i < blockPiecePositionsToCreateShape.Length; i++)

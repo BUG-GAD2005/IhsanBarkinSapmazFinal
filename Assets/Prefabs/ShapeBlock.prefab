@@ -222,9 +222,13 @@ MonoBehaviour:
   blockPiecePositions:
   - {x: 0, y: 0}
   - {x: 1, y: 0}
+  constructionTimerImage: {fileID: 8908495027072741751, guid: ccf6a5967501f3c489651620d9570f8f, type: 3}
   previewPieceSize: 40
   previewPieceOffset: 3
   selector: {fileID: 0}
+  constructionTime: 0
+  gemCost: 0
+  goldCost: 0
 --- !u!114 &3549789252759274148
 MonoBehaviour:
   m_ObjectHideFlags: 0
