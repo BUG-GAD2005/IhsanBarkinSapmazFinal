@@ -28,13 +28,15 @@ public class ShapeBlock : MonoBehaviour
     public int gemResourceGainAmount;
     public int goldResourceGainAmount;
 
-    public int resourceGenerateCooldownAmount;
+    public int resourceGenerateCooldown;
+    private int resourceGeneratorCooldownTemp;
     private bool isConstructed;
     private void Start()
     {
         selector = GetComponent<ShapeBlockSelector>();
 
         SpawnBlockPieces();
+
     }
 
     public void UpdateBlockPiecesPreview()
@@ -129,7 +131,7 @@ public class ShapeBlock : MonoBehaviour
 
     private void ResourceGeneratingState(Image resourceGeneratingTimerImage)
     {
-        resourceGeneratingTimerImage.fillAmount = (resourceGenerateCooldownAmount * 10) / 100f;
+        resourceGeneratingTimerImage.fillAmount = (resourceGenerateCooldown * 10) / 100f;
     }
 
     IEnumerator ConstructionTimer()
@@ -139,8 +141,11 @@ public class ShapeBlock : MonoBehaviour
         timerImage.transform.position = blockPieces[0].transform.position;
         var tempTimer = constructionTime;
 
+        Destroy(this.gameObject.GetComponent<ShapeBlockSelector>());
+
         foreach (var item in blockPieces)
         {
+            Destroy(item.gameObject.GetComponent<ShapeBlockPieceSelector>());
             item.gameObject.GetComponent<Image>().color = Color.white;
             item.gameObject.GetComponent<Image>().raycastTarget = false;
             item.gameObject.GetComponent<Image>().maskable = false;
@@ -164,24 +169,24 @@ public class ShapeBlock : MonoBehaviour
 
     IEnumerator BuildingResourceGenerateState()
     {
-        for (int i = 0; i < 20000; i++)
+        resourceGeneratorCooldownTemp = resourceGenerateCooldown;
+        for (int i = 0; i < 10000; i++)
         {
+            resourceGenerateCooldown = resourceGeneratorCooldownTemp;
             var timerImage = Instantiate(constructionTimerImage, transform.position, Quaternion.identity);
             timerImage.transform.SetParent(blockPieces[0].transform);
             timerImage.transform.position = blockPieces[0].transform.position;
-            var tempTimer = resourceGenerateCooldownAmount;
+            var tempTimer = resourceGeneratorCooldownTemp;
             for (int a = tempTimer; tempTimer >= 0; tempTimer--)
             {
-                resourceGenerateCooldownAmount--;
+                resourceGenerateCooldown--;
                 ResourceGeneratingState(timerImage);
                 yield return new WaitForSeconds(1f);
             }
-            Destroy(timerImage);
             Debug.Log("RESOURCE AMOUNT IS ADDING");
             PlayerResources.Instance.IncreasePlayerSource(goldResourceGainAmount, gemResourceGainAmount);
             Debug.Log("RESOURCE GENERATOR FINISHED");
+
         }
-
-
     }
 }

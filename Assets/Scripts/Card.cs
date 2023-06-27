@@ -73,7 +73,7 @@ public class Card : MonoBehaviour, IPointerClickHandler
         blockShape.GetComponent<ShapeBlock>().buildingSprite = buildingImage;
         blockShape.GetComponent<ShapeBlock>().gemResourceGainAmount = gemResourceGainAmount;
         blockShape.GetComponent<ShapeBlock>().goldResourceGainAmount = goldResourceGainAmount;
-        blockShape.GetComponent<ShapeBlock>().resourceGenerateCooldownAmount = resourceGeneratorCooldownAmount;
+        blockShape.GetComponent<ShapeBlock>().resourceGenerateCooldown = resourceGeneratorCooldownAmount;
         blockShape.transform.SetParent(transform);
         blockShape.GetComponent<ShapeBlock>().blockPiecePositions = new Vector2[blockPiecePositionsToCreateShape.Length];
         for (int i = 0; i < blockPiecePositionsToCreateShape.Length; i++)
