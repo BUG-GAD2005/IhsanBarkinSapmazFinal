@@ -28,10 +28,14 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
     private Color currentDefaultColor;
 
+    private bool isThereEnoughResource;
+
     [SerializeField] private TextMeshProUGUI requiredGoldSourceText;
     [SerializeField] private TextMeshProUGUI requiredGemSourceText;
+
     void Start()
     {
+        isThereEnoughResource = true;
         currentDefaultColor = this.gameObject.GetComponent<Image>().color;
         this.gameObject.transform.Find("CardImage").GetComponent<Image>().sprite = buildingImage;
         requiredGemSourceText.text = gemCostAmount.ToString();
@@ -65,24 +69,26 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("ENTEREDDD");
-        var blockShape = Instantiate(blockShapePrefab, transform.position, Quaternion.identity);
-        blockShape.GetComponent<ShapeBlock>().goldCost = goldCostAmount;
-        blockShape.GetComponent<ShapeBlock>().gemCost = gemCostAmount;
-        blockShape.GetComponent<ShapeBlock>().constructionTime = constructionTime;
-        blockShape.GetComponent<ShapeBlock>().buildingSprite = buildingImage;
-        blockShape.GetComponent<ShapeBlock>().gemResourceGainAmount = gemResourceGainAmount;
-        blockShape.GetComponent<ShapeBlock>().goldResourceGainAmount = goldResourceGainAmount;
-        blockShape.GetComponent<ShapeBlock>().resourceGenerateCooldown = resourceGeneratorCooldownAmount;
-        blockShape.transform.SetParent(transform);
-        blockShape.GetComponent<ShapeBlock>().blockPiecePositions = new Vector2[blockPiecePositionsToCreateShape.Length];
-        for (int i = 0; i < blockPiecePositionsToCreateShape.Length; i++)
+        if (isThereEnoughResource)
         {
-            blockShape.GetComponent<ShapeBlock>().blockPiecePositions[i] = blockPiecePositionsToCreateShape[i];
-        }
-        if (blockShape != null)
-        {
-            blockShape.GetComponent<ShapeBlockSelector>().SelectBlock();
+            var blockShape = Instantiate(blockShapePrefab, transform.position, Quaternion.identity);
+            blockShape.GetComponent<ShapeBlock>().goldCost = goldCostAmount;
+            blockShape.GetComponent<ShapeBlock>().gemCost = gemCostAmount;
+            blockShape.GetComponent<ShapeBlock>().constructionTime = constructionTime;
+            blockShape.GetComponent<ShapeBlock>().buildingSprite = buildingImage;
+            blockShape.GetComponent<ShapeBlock>().gemResourceGainAmount = gemResourceGainAmount;
+            blockShape.GetComponent<ShapeBlock>().goldResourceGainAmount = goldResourceGainAmount;
+            blockShape.GetComponent<ShapeBlock>().resourceGenerateCooldown = resourceGeneratorCooldownAmount;
+            blockShape.transform.SetParent(transform);
+            blockShape.GetComponent<ShapeBlock>().blockPiecePositions = new Vector2[blockPiecePositionsToCreateShape.Length];
+            for (int i = 0; i < blockPiecePositionsToCreateShape.Length; i++)
+            {
+                blockShape.GetComponent<ShapeBlock>().blockPiecePositions[i] = blockPiecePositionsToCreateShape[i];
+            }
+            if (blockShape != null)
+            {
+                blockShape.GetComponent<ShapeBlockSelector>().SelectBlock();
+            }
         }
     }
 }

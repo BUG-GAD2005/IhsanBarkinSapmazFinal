@@ -31,8 +31,14 @@ public class ShapeBlock : MonoBehaviour
     public int resourceGenerateCooldown;
     private int resourceGeneratorCooldownTemp;
     private bool isConstructed;
+
+    private GameObject buildingCanvas;
+    public GameObject textThatShowsGainedResource;
+    public GameObject textThatShowsLostResource;
     private void Start()
     {
+        buildingCanvas = GameObject.Find("BuildingCanvas");
+
         selector = GetComponent<ShapeBlockSelector>();
 
         SpawnBlockPieces();
@@ -81,7 +87,7 @@ public class ShapeBlock : MonoBehaviour
 
             blockPiece.transform.SetParent(transform.parent, true);
             blockPiece.transform.position = GridManager.Instance.GetGridCellPos(targetCell);
-
+            blockPiece.transform.SetParent(buildingCanvas.transform);
 
             blockPiece.ownerBlock = null;
 
@@ -90,6 +96,13 @@ public class ShapeBlock : MonoBehaviour
         }
 
         PlayerResources.Instance.DecreasePlayerSource(goldCost,gemCost);
+        var floatingTextThatShowsLostResource = Instantiate(textThatShowsLostResource, transform.position, Quaternion.identity);
+        floatingTextThatShowsLostResource.transform.SetParent(blockPieces[0].transform);
+        floatingTextThatShowsLostResource.transform.position = blockPieces[0].transform.position;
+        floatingTextThatShowsLostResource.transform.SetParent(buildingCanvas.transform);
+        floatingTextThatShowsLostResource.GetComponent<FloatinGainedResourceText>().gainedGemAmount = -gemCost;
+        floatingTextThatShowsLostResource.GetComponent<FloatinGainedResourceText>().gainedGoldAmount = -goldCost;
+        floatingTextThatShowsLostResource.GetComponent<FloatinGainedResourceText>().ShowTheAmountOfGainedResource();
 
         StartCoroutine(ConstructionTimer());
         //Destroy(gameObject);
@@ -155,6 +168,7 @@ public class ShapeBlock : MonoBehaviour
         {
             constructionTime--;
             ConstructionState(timerImage);
+            timerImage.GetComponent<TimerAndFillingBar>().timerText.text = tempTimer.ToString();
             Debug.Log("TEST01");
             yield return new WaitForSeconds(1f);
         }
@@ -163,7 +177,7 @@ public class ShapeBlock : MonoBehaviour
         {
             item.GetComponent<Image>().sprite = buildingSprite;
         }
-
+        Destroy(timerImage.gameObject);
         StartCoroutine(BuildingResourceGenerateState());
     }
 
@@ -181,12 +195,18 @@ public class ShapeBlock : MonoBehaviour
             {
                 resourceGenerateCooldown--;
                 ResourceGeneratingState(timerImage);
+                timerImage.GetComponent<TimerAndFillingBar>().timerText.text = tempTimer.ToString();
                 yield return new WaitForSeconds(1f);
             }
-            Debug.Log("RESOURCE AMOUNT IS ADDING");
+            var floatingTextThatShowsGainedResource = Instantiate(textThatShowsGainedResource, transform.position, Quaternion.identity);
+            floatingTextThatShowsGainedResource.transform.SetParent(blockPieces[0].transform);
+            floatingTextThatShowsGainedResource.transform.position = blockPieces[0].transform.position;
+            floatingTextThatShowsGainedResource.transform.SetParent(buildingCanvas.transform);
+            floatingTextThatShowsGainedResource.GetComponent<FloatinGainedResourceText>().gainedGemAmount = gemResourceGainAmount;
+            floatingTextThatShowsGainedResource.GetComponent<FloatinGainedResourceText>().gainedGoldAmount = goldResourceGainAmount;
+            floatingTextThatShowsGainedResource.GetComponent<FloatinGainedResourceText>().ShowTheAmountOfGainedResource();
             PlayerResources.Instance.IncreasePlayerSource(goldResourceGainAmount, gemResourceGainAmount);
-            Debug.Log("RESOURCE GENERATOR FINISHED");
-
+            Destroy(timerImage.gameObject);
         }
     }
 }

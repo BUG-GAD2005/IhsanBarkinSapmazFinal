@@ -227,8 +227,14 @@ MonoBehaviour:
   previewPieceOffset: 3
   selector: {fileID: 0}
   constructionTime: 0
+  buildingSprite: {fileID: 0}
   gemCost: 0
   goldCost: 0
+  gemResourceGainAmount: 0
+  goldResourceGainAmount: 0
+  resourceGenerateCooldown: 0
+  textThatShowsGainedResource: {fileID: 220800238787375252, guid: 78a91318afc12804dad50420b8905754, type: 3}
+  textThatShowsLostResource: {fileID: 220800238787375252, guid: c6e5420f2c463c241b6cc487665ff2ae, type: 3}
 --- !u!114 &3549789252759274148
 MonoBehaviour:
   m_ObjectHideFlags: 0

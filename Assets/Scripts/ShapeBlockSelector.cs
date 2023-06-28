@@ -10,6 +10,7 @@ public class ShapeBlockSelector : MonoBehaviour
 
     private bool isSelected;
 
+    RaycastHit2D rayHitToCheckIsOccupiedOrNot;
     private void Start()
     {
         block = GetComponent<ShapeBlock>();
