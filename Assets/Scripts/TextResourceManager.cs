@@ -10,6 +10,7 @@ public class TextResourceManager : MonoBehaviour
     void Start()
     {
         PlayerResources.Instance.UpdateThePlayerResourceText += UpdateResourceTexts;
+        UpdateResourceTexts();
     }
 
     public void UpdateResourceTexts()

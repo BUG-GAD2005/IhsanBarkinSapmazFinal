@@ -35,6 +35,9 @@ public class ShapeBlock : MonoBehaviour
     private GameObject buildingCanvas;
     public GameObject textThatShowsGainedResource;
     public GameObject textThatShowsLostResource;
+
+    public GameObject prefab;
+    private bool theBlockIsContested;
     private void Start()
     {
         buildingCanvas = GameObject.Find("BuildingCanvas");
@@ -42,7 +45,6 @@ public class ShapeBlock : MonoBehaviour
         selector = GetComponent<ShapeBlockSelector>();
 
         SpawnBlockPieces();
-
     }
 
     public void UpdateBlockPiecesPreview()
@@ -209,4 +211,6 @@ public class ShapeBlock : MonoBehaviour
             Destroy(timerImage.gameObject);
         }
     }
+
+
 }

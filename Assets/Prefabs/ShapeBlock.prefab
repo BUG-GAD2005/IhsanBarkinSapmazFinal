@@ -222,6 +222,12 @@ MonoBehaviour:
   blockPiecePositions:
   - {x: 0, y: 0}
   - {x: 1, y: 0}
+  blockPieces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   constructionTimerImage: {fileID: 8908495027072741751, guid: ccf6a5967501f3c489651620d9570f8f, type: 3}
   previewPieceSize: 40
   previewPieceOffset: 3
@@ -235,6 +241,7 @@ MonoBehaviour:
   resourceGenerateCooldown: 0
   textThatShowsGainedResource: {fileID: 220800238787375252, guid: 78a91318afc12804dad50420b8905754, type: 3}
   textThatShowsLostResource: {fileID: 220800238787375252, guid: c6e5420f2c463c241b6cc487665ff2ae, type: 3}
+  prefab: {fileID: 3549789252759274079}
 --- !u!114 &3549789252759274148
 MonoBehaviour:
   m_ObjectHideFlags: 0

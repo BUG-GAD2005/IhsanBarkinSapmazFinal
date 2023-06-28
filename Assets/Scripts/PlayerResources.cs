@@ -20,11 +20,6 @@ public class PlayerResources : MonoBehaviour, IDataPersistance
         Instance = this;
     }
 
-    private void Start()
-    {
-
-    }
-
     public void DecreasePlayerSource(int costOfGold, int costOfGem)
     {
         gemSource -= costOfGem;

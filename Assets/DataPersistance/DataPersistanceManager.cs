@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using UnityEngine.SceneManagement;
 public class DataPersistanceManager : MonoBehaviour
 {
     [Header("File storage config")]
@@ -20,10 +20,10 @@ public class DataPersistanceManager : MonoBehaviour
         if (instance!=null)
         {
             Debug.Log("There is more than one data persistance manager!");
-            instance = this;
         }
-    }
+        instance = this;
 
+    }
 
     private void Start()
     {

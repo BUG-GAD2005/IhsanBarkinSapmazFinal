@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Card : MonoBehaviour, IPointerClickHandler
+public class Card : MonoBehaviour, IPointerClickHandler, IDataPersistance
 {
     [SerializeField] private Sprite buildingImage;
 
@@ -19,10 +19,10 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
     public GameObject blockShapePrefab;
 
-    [SerializeField] private int gemResourceGainAmount;
-    [SerializeField] private int goldResourceGainAmount;
+    public int gemResourceGainAmount;
+    public int goldResourceGainAmount;
 
-    [SerializeField] private int resourceGeneratorCooldownAmount;
+    public int resourceGeneratorCooldownAmount;
 
     private bool mouseClicked;
 
@@ -41,6 +41,7 @@ public class Card : MonoBehaviour, IPointerClickHandler
         requiredGemSourceText.text = gemCostAmount.ToString();
         requiredGoldSourceText.text = goldCostAmount.ToString();
         PlayerResources.Instance.isCurrentResourceEnoughForCardCost += CurrentResourceIsEnoughForThisCard;
+        CurrentResourceIsEnoughForThisCard();
     }
 
     public void UpdateStatsAboutCardOnUI()
@@ -90,5 +91,15 @@ public class Card : MonoBehaviour, IPointerClickHandler
                 blockShape.GetComponent<ShapeBlockSelector>().SelectBlock();
             }
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+
+    }
+
+    public void SaveData(ref GameData data)
+    {
+
     }
 }

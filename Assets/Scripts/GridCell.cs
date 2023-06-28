@@ -52,5 +52,4 @@ public class GridCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
     }
 
-
 }
