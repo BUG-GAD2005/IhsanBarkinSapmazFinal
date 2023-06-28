@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerResources : MonoBehaviour
+public class PlayerResources : MonoBehaviour, IDataPersistance
 {
     public int gemSource = 10;
     public int goldSource = 10;
@@ -18,6 +18,11 @@ public class PlayerResources : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+
     }
 
     public void DecreasePlayerSource(int costOfGold, int costOfGem)
@@ -36,4 +41,15 @@ public class PlayerResources : MonoBehaviour
         isCurrentResourceEnoughForCardCost.Invoke();
     }
 
+    public void LoadData(GameData data)
+    {
+        this.gemSource = data.playerGemSource;
+        this.goldSource = data.playerGoldSource;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerGemSource = this.gemSource;
+        data.playerGoldSource = this.goldSource;
+    }
 }

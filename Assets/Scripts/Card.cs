@@ -28,7 +28,7 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
     private Color currentDefaultColor;
 
-    private bool isThereEnoughResource;
+    public bool isThereEnoughResource;
 
     [SerializeField] private TextMeshProUGUI requiredGoldSourceText;
     [SerializeField] private TextMeshProUGUI requiredGemSourceText;
